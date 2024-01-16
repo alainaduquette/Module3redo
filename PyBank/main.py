@@ -20,18 +20,18 @@ with open("C:\\Users\\alain\\Documents\\Bootcamp\\Python Challenge\\Python-Chall
         else:
             changedict[date] = int(profit) - temp
             temp = int(profit)
-        
+        #adding a tick to the month counter
         month_counter = month_counter + 1
 
         total = total + int(profit)
 
-
+#the below is to be printed out
 print("Financial Analysis")
 print("")
 print("----------------------------")
 print("")
 print("Total Months: " + str(month_counter))
 print("Total: " + str(total))
-print("Average Change: " + str(int(total) / int(len(changedict))))
+##print("Average Change: " + str(int(changedict) / int(len(changedict))))
 print("Greatest Increase in Profits: " + max(changedict, key=changedict.get), max(changedict.values()))
-print("Greatest Decrease in Profits: " + min(changedict, key=changedict.get), max(changedict.values()))
+print("Greatest Decrease in Profits: " + min(changedict, key=changedict.get), min(changedict.values()))
